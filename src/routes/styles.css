@@ -1,0 +1,473 @@
+/* Grundlegende Stile */
+/* Definiert Farbvariablen fuer das gesamte Design */
+:root {
+  --primary-color: #002855;
+  --secondary-color: #0070f3;
+  --hover-color: #004080;
+  --background-light: #f9f9f9;
+}
+
+/* Basis-Layout fuer die Seite */
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  font-size: 1.1rem;
+  background-color: white;
+  color: #000;
+}
+
+/* Header */
+/* Oberer Balken mit Logo und Suche */
+.top-bar {
+  background-color: white;
+  border-bottom: 1px solid #ccc;
+  padding: 1rem 0.5rem;
+  display: flex;
+  justify-content: center;
+}
+
+/* Innenbereich des Headers */
+.top-inner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 3rem;
+  flex-wrap: wrap;
+  width: 100%;
+  max-width: 1400px;
+}
+
+/* Logo im Header */
+.logo {
+  height: 150px;
+  width: auto;
+}
+
+/* Suchfeld im Header */
+.search-container {
+  display: flex;
+  align-items: center;
+  max-width: 400px;
+  width: 100%;
+}
+
+/* Suchfeld-Input */
+.search-container input {
+  flex: 1;
+  padding: 0.6rem 0.8rem;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 6px 0 0 6px;
+  outline: none;
+}
+
+/* Such-Button */
+.search-container button {
+  padding: 0.6rem 0.9rem;
+  background-color: var(--secondary-color);
+  border: none;
+  color: white;
+  font-size: 1rem;
+  border-radius: 0 6px 6px 0;
+  cursor: pointer;
+}
+
+/* Profil-Button im Header */
+.profile-button {
+  background-color: var(--secondary-color);
+  color: white;
+  padding: 0.4rem 0.8rem;
+  font-weight: bold;
+  text-decoration: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+/* Profilbild im Profil-Button */
+.profile-button img.profile-image {
+  height: 32px;
+  width: 32px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+/* Navigation */
+/* Navigationsleiste unter dem Header */
+.navbar {
+  background-color: var(--primary-color);
+  display: flex;
+  justify-content: center;
+  padding: 0.75rem 1.5rem;
+  gap: 2.5rem;
+}
+
+/* Navigationslinks */
+.navbar a {
+  color: white;
+  font-weight: bold;
+  text-decoration: none;
+  font-size: 1.1rem;
+}
+
+/* Hover-Effekt fuer Navigation */
+.navbar a:hover {
+  text-decoration: underline;
+}
+
+/* Hauptbereich der Seite */
+.page-content {
+  padding: 2rem;
+  text-align: center;
+}
+
+/* Startseite */
+/* Ueberschrift */
+h1 {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-top: 2rem;
+}
+
+/* Einleitungstext */
+.intro {
+  max-width: 800px;
+  margin: 1.5rem auto;
+  font-size: 1.1rem;
+  line-height: 1.6;
+  text-align: center;
+  color: #333;
+}
+
+/* Wrapper fuer das Video */
+.video-wrapper {
+  display: flex;
+  justify-content: center;
+  margin: 2rem 0;
+}
+
+/* Video-Element */
+video {
+  border-radius: 12px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* Spielerliste */
+/* Tabellen fuer Spieler */
+table.players,
+.player-table {
+  width: 95%;
+  margin: auto;
+  border-collapse: collapse;
+  font-family: system-ui, sans-serif;
+}
+
+/* Tabellenkoepfe und Zellen */
+table.players th,
+table.players td,
+.player-table th,
+.player-table td {
+  padding: 1rem;
+  border-bottom: 1px solid #ddd;
+  text-align: left;
+}
+
+/* Tabellenkopf-Hintergrund */
+thead {
+  background-color: var(--background-light);
+}
+
+/* Spielerbilder in Tabellen */
+table.players img,
+.avatar {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-right: 0.5rem;
+}
+
+/* Hover-Effekte fuer Tabellen */
+th:hover,
+tbody tr:hover {
+  background-color: #f0f4ff;
+}
+
+/* Allgemeine Links */
+a {
+  color: var(--hover-color);
+  text-decoration: none;
+  font-weight: 500;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* Zelle mit Spielerbild und Name */
+.spieler-cell {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+/* Spielerprofil */
+/* Name des Spielers */
+.player-name {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+
+/* Profilbereich */
+.player-profile {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+  padding: 2rem;
+}
+
+/* Spielerbild im Profil */
+.player-image {
+  width: 250px;
+  height: auto;
+  border-radius: 10px;
+  object-fit: cover;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Liste der Spielerinfos */
+.player-details {
+  list-style: none;
+  padding: 0;
+  font-size: 1.25rem;
+  text-align: center;
+}
+
+.player-details li {
+  margin-bottom: 0.5rem;
+}
+
+/* Teamuebersicht */
+/* Titel */
+.title {
+  text-align: center;
+  font-size: 2rem;
+  margin: 2rem 0;
+}
+
+/* Grid fuer Teamkarten */
+.team-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2rem;
+  padding: 0 2rem;
+  justify-items: center;
+}
+
+/* Einzelne Teamkarte */
+.team-card {
+  cursor: pointer;
+  background-color: #f9f9f9;
+  border-radius: 10px;
+  padding: 1rem;
+  text-align: center;
+  transition: transform 0.2s ease;
+  width: 100%;
+}
+
+/* Hover-Effekt fuer Teamkarte */
+.team-card:hover {
+  transform: scale(1.03);
+  background-color: #e6f0ff;
+}
+
+/* Teamlogo in der Karte */
+.team-logo {
+  width: 100px;
+  height: 100px;
+  object-fit: contain;
+  margin-bottom: 0.5rem;
+}
+
+/* Team-Details */
+/* Container fuer Teamdetailseite */
+.team-container {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 4rem;
+  padding: 2rem;
+  flex-wrap: wrap;
+}
+
+/* Bereich mit Teaminfos */
+.team-info {
+  max-width: 400px;
+  text-align: left;
+}
+
+/* Teamlogo auf der Detailseite */
+.team-detail-logo {
+  display: block;
+  margin: 1rem 0;
+  width: 150px;
+  height: 150px;
+  object-fit: contain;
+}
+
+/* Listen fuer Details */
+ul {
+  list-style: none;
+  padding: 0;
+  font-size: 1.2rem;
+}
+
+li {
+  margin-bottom: 0.5rem;
+}
+
+/* Bereich fuer Teamfotos */
+.team-media {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+/* Bilder fuer Team und Stadion */
+.media-image {
+  max-width: 400px;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Formulare */
+/* Block fuer Formulare */
+.form-block {
+  max-width: 500px;
+  width: 100%;
+}
+
+/* Formular-Layout */
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  padding: 1rem;
+  border: 2px solid #ccc;
+  border-radius: 0.5rem;
+  background-color: white;
+}
+
+/* Inputs und Selects im Formular */
+.form input,
+.form select {
+  padding: 0.5rem;
+  font-size: 1rem;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  width: 100%;
+}
+
+/* Zeilen im Formular */
+.row {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.row select {
+  flex: 1;
+}
+
+/* Container fuer Formularseiten */
+.container {
+  display: flex;
+  justify-content: center;
+  gap: 5rem;
+  flex-wrap: wrap;
+}
+
+/* Primaerer Button */
+.btn-primary {
+  background-color: var(--primary-color);
+  color: white;
+  padding: 0.5rem;
+  border: none;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+.btn-primary:hover {
+  background-color: var(--hover-color);
+}
+
+/* Filter */
+
+/* Filterleiste */
+.filter-bar {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 1.5rem;
+}
+
+/* Filterformular */
+.filter-form {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+.filter-form select,
+.filter-form input {
+  padding: 0.5rem;
+  font-size: 1rem;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+/* Profilseite */
+.center {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+/* Formular auf Profilseite */
+.form {
+  max-width: 400px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+select,
+button {
+  padding: 0.5rem;
+  font-size: 1rem;
+  border-radius: 5px;
+}
+
+/* Primaerer Button auf Profilseite */
+.btn-primary {
+  background-color: #0a1b49;
+  color: white;
+  border: none;
+  cursor: pointer;
+  padding: 0.5rem;
+  font-size: 1rem;
+  border-radius: 5px;
+}
+
+/* Ergebnisanzeige auf Profilseite */
+.result {
+  margin-top: 2rem;
+  text-align: center;
+  font-size: 1.2rem;
+}
