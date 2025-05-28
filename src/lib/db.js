@@ -24,12 +24,12 @@ export async function getTeams() {
   }
 }
 
-// Ein neues Team zur Datenbank hinzufuegen
+// Ein neues Team zur Datenbank hinzufügen
 export async function addTeam(team) {
   return await db.collection("teams").insertOne(team);
 }
 
-// Ein Team anhand der ID aus der Datenbank loeschen
+// Ein Team anhand der ID aus der Datenbank löschen
 export async function deleteTeamById(id) {
   return await db.collection("teams").deleteOne({ _id: new ObjectId(id) });
 }
@@ -64,24 +64,24 @@ export async function getPlayers() {
   }
 }
 
-// Einen neuen Spieler zur Datenbank hinzufuegen
+// Einen neuen Spieler zur Datenbank hinzufügen
 export async function addPlayer(player) {
   try {
     const result = await db.collection("players").insertOne(player);
     return result.insertedId;
   } catch (err) {
-    console.error("Fehler beim Hinzufuegen des Spielers:", err.message);
+    console.error("Fehler beim Hinzufügen des Spielers:", err.message);
     return null;
   }
 }
 
-// Einen Spieler anhand der ID aus der Datenbank loeschen
+// Einen Spieler anhand der ID aus der Datenbank löschen
 export async function deletePlayerById(id) {
   try {
     const result = await db.collection("players").deleteOne({ _id: new ObjectId(id) });
     return result.deletedCount === 1;
   } catch (err) {
-    console.error("Fehler beim Loeschen des Spielers:", err.message);
+    console.error("Fehler beim Löschen des Spielers:", err.message);
     return false;
   }
 }
@@ -96,18 +96,6 @@ export async function getPlayerById(id) {
     console.error("Fehler in getPlayerById:", err.message);
     return null;
   }
-}
-
-// Einen neuen Spieler hinzufuegen, falls noch nicht vorhanden (optional)
-export async function addPlayer(player) {
-  const db = await getDb();
-  const players = db.collection('players');
-
-  // Optional: Verhindere Duplikate (z. B. per Name + Alter)
-  const exists = await players.findOne({ name: player.name, age: player.age });
-  if (exists) return;
-
-  await players.insertOne(player);
 }
 
 // Alle Spieler aus der Datenbank holen
