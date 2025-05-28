@@ -8,6 +8,7 @@ await client.connect();
 // Zugriff auf die FootballScout-Datenbank
 const db = client.db("FootballScout");
 
+
 //////////////////////////////////////////
 // TEAMS
 //////////////////////////////////////////
@@ -67,6 +68,9 @@ export async function getPlayers() {
 // Einen neuen Spieler zur Datenbank hinzufügen
 export async function addPlayer(player) {
   try {
+    const exists = await db.collection("players").findOne({ name: player.name, age: player.age });
+    if (exists) return null;
+
     const result = await db.collection("players").insertOne(player);
     return result.insertedId;
   } catch (err) {
