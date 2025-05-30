@@ -1,5 +1,5 @@
 /* Grundlegende Stile */
-/* Definiert Farbvariablen fuer das gesamte Design */
+/* Definiert Farbvariablen für das gesamte Design */
 :root {
   --primary-color: #002855;
   --secondary-color: #0070f3;
@@ -7,7 +7,7 @@
   --background-light: #f9f9f9;
 }
 
-/* Basis-Layout fuer die Seite */
+/* Basis-Layout für die Seite */
 body {
   margin: 0;
   font-family: 'Segoe UI', sans-serif;
@@ -112,7 +112,7 @@ body {
   font-size: 1.1rem;
 }
 
-/* Hover-Effekt fuer Navigation */
+/* Hover-Effekt für Navigation */
 .navbar a:hover {
   text-decoration: underline;
 }
@@ -124,7 +124,7 @@ body {
 }
 
 /* Startseite */
-/* Ueberschrift */
+/* Überschrift */
 h1 {
   text-align: center;
   font-size: 2.5rem;
@@ -141,7 +141,7 @@ h1 {
   color: #333;
 }
 
-/* Wrapper fuer das Video */
+/* Wrapper für das Video */
 .video-wrapper {
   display: flex;
   justify-content: center;
@@ -155,7 +155,7 @@ video {
 }
 
 /* Spielerliste */
-/* Tabellen fuer Spieler */
+/* Tabellen für Spieler */
 table.players,
 .player-table {
   width: 95%;
@@ -164,7 +164,7 @@ table.players,
   font-family: system-ui, sans-serif;
 }
 
-/* Tabellenkoepfe und Zellen */
+/* Tabellenköpfe und Zellen */
 table.players th,
 table.players td,
 .player-table th,
@@ -252,7 +252,7 @@ a:hover {
   margin-bottom: 0.5rem;
 }
 
-/* Teamuebersicht */
+/* Teamübersicht */
 /* Titel */
 .title {
   text-align: center;
@@ -260,7 +260,7 @@ a:hover {
   margin: 2rem 0;
 }
 
-/* Grid fuer Teamkarten */
+/* Grid für Teamkarten */
 .team-grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -295,7 +295,7 @@ a:hover {
 }
 
 /* Team-Details */
-/* Container fuer Teamdetailseite */
+/* Container für Teamdetailseite */
 .team-container {
   display: flex;
   justify-content: center;
@@ -320,7 +320,7 @@ a:hover {
   object-fit: contain;
 }
 
-/* Listen fuer Details */
+/* Listen für Details */
 ul {
   list-style: none;
   padding: 0;
@@ -331,7 +331,7 @@ li {
   margin-bottom: 0.5rem;
 }
 
-/* Bereich fuer Teamfotos */
+/* Bereich für Teamfotos */
 .team-media {
   display: flex;
   flex-direction: column;
@@ -339,7 +339,7 @@ li {
   gap: 1.5rem;
 }
 
-/* Bilder fuer Team und Stadion */
+/* Bilder für Team und Stadion */
 .media-image {
   max-width: 400px;
   height: auto;
@@ -348,7 +348,7 @@ li {
 }
 
 /* Formulare */
-/* Block fuer Formulare */
+/* Block für Formulare */
 .form-block {
   max-width: 500px;
   width: 100%;
@@ -358,7 +358,7 @@ li {
 .form {
   display: flex;
   flex-direction: column;
-  gap: 0.75rem;
+  gap: 1rem;
   padding: 1rem;
   border: 2px solid #ccc;
   border-radius: 0.5rem;
@@ -386,7 +386,7 @@ li {
   flex: 1;
 }
 
-/* Container fuer Formularseiten */
+/* Container für Formularseiten */
 .container {
   display: flex;
   justify-content: center;
@@ -394,7 +394,7 @@ li {
   flex-wrap: wrap;
 }
 
-/* Primaerer Button */
+/* Primärer Button */
 .btn-primary {
   background-color: var(--primary-color);
   color: white;
@@ -454,7 +454,7 @@ button {
   border-radius: 5px;
 }
 
-/* Primaerer Button auf Profilseite */
+/* Primärer Button auf Profilseite */
 .btn-primary {
   background-color: #0a1b49;
   color: white;
