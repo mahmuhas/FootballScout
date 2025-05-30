@@ -10,14 +10,14 @@ export async function load() {
 }
 
 export const actions = {
-  // Aktion zum Hinzufuegen eines neuen Spielers
+  // Aktion zum Hinzufügen eines neuen Spielers
   add: async ({ request }) => {
     const data = await request.formData();
     const file = data.get('photo');
     const buffer = await file.arrayBuffer();
     const bytes = new Uint8Array(buffer);
 
-    // Erzeuge Dateinamen und Speicherpfad fuer das Bild
+    // Erzeuge Dateinamen und Speicherpfad für das Bild
     const fileName = `${Date.now()}_${file.name}`;
     const filePath = path.join('static', 'images', fileName);
     fs.writeFileSync(filePath, bytes);
