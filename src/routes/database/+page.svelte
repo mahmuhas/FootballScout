@@ -2,14 +2,14 @@
   import { goto } from "$app/navigation";
   const { data } = $props(); // Props aus den übergebenen Daten extrahieren
 
-  // Filter-Variablen fuer die Suche und Filterung
+  // Filter-Variablen für die Suche und Filterung
   let query = "";
   let position = "";
   let nationality = "";
   let minAge = "";
   let maxAge = "";
 
-  // Funktion zum Filtern der Spieler nach Suchtext, Position, Nationalitaet und Alter
+  // Funktion zum Filtern der Spieler nach Suchtext, Position, Nationalität und Alter
   function filterPlayers(player) {
     const matchName = player.name.toLowerCase().includes(query.toLowerCase());
     const matchPosition = !position || player.position === position;
@@ -23,7 +23,7 @@
 <h1>Spielerdatenbank</h1>
 <!-- Überschrift der Seite -->
 
-<!-- Filterleiste fuer Suche und Filteroptionen -->
+<!-- Filterleiste für Suche und Filteroptionen -->
 <div class="filters">
   <input type="text" placeholder="Spieler suchen..." bind:value={query} />
   <select bind:value={position}>
