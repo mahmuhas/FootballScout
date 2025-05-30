@@ -24,7 +24,7 @@ export const actions = {
       stadiumImage: data.get('stadiumImage')
     };
 
-    // Fuege Team zur Datenbank hinzu
+    // Füge Team zur Datenbank hinzu
     await addTeam(team);
     // Weiterleitung nach dem Hinzufügen
     throw redirect(303, '/manage_teams');
