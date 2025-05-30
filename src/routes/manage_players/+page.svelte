@@ -1,21 +1,14 @@
 <script>
-  // Props aus den übergebenen Daten extrahern
   const { data } = $props();
 </script>
 
 <h1 class="center">Spieler verwalten</h1>
 <!-- Überschrift der Seite -->
-
 <div class="container">
   <div class="form-block">
     <h2>Neuen Spieler hinzufügen</h2>
     <!-- Formular zum Hinzufügen eines neuen Spielers -->
-    <form
-      method="POST"
-      action="?/add"
-      enctype="multipart/form-data"
-      class="form"
-    >
+    <form method="POST" action="?/add" class="form">
       <input name="name" placeholder="Name" required />
 
       <div class="row">
@@ -44,24 +37,10 @@
         </select>
       </div>
 
-      <input
-        name="market_value"
-        type="number"
-        min="0"
-        placeholder="Marktwert (Mio)"
-        required
-      />
+      <input name="market_value" type="number" min="0" placeholder="Marktwert (Mio)" required />
       <input name="nationality" placeholder="Nationalität" required />
 
-      <div class="row">
-        <label for="photo">Spielerbild:</label>
-        <input
-          type="file"
-          name="photo"
-          accept=".png,.jpg,.jpeg,.webp"
-          required
-        />
-      </div>
+      <input name="photo" type="url" placeholder="Bild-URL" required />
 
       <button type="submit" class="btn-primary">Hinzufügen</button>
     </form>
