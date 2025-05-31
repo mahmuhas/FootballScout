@@ -7,12 +7,12 @@ export async function load({ url }) {
   // Lade alle Teams aus der Datenbank
   const teams = await getTeams();
 
-  // Hole ausgewaehlten Spieler aus den URL-Parametern (falls vorhanden)
+  // Hole ausgewählten Spieler aus den URL-Parametern (falls vorhanden)
   const selectedPlayer = url.searchParams.get('player') ?? '';
-  // Hole ausgewaehltes Team aus den URL-Parametern (falls vorhanden)
+  // Hole ausgewähltes Team aus den URL-Parametern (falls vorhanden)
   const selectedTeam = url.searchParams.get('team') ?? '';
 
-  // Rueckgabe der Daten an die Seite
+  // Rückgabe der Daten an die Seite
   return {
     players,
     teams,

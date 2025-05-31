@@ -280,7 +280,7 @@ a:hover {
   width: 100%;
 }
 
-/* Hover-Effekt fuer Teamkarte */
+/* Hover-Effekt für Teamkarte */
 .team-card:hover {
   transform: scale(1.03);
   background-color: #e6f0ff;

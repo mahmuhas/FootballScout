@@ -1,13 +1,13 @@
 // Importiere Funktion zum Laden der Spieler aus der API
 import { getPlayersFromLeagues } from '$lib/api/football';
-// Importiere Funktionen zum Hinzufuegen und Laden aller Spieler aus der Datenbank
+// Importiere Funktionen zum Hinzufügen und Laden aller Spieler aus der Datenbank
 import { addPlayer, getAllPlayers } from '$lib/db.js';
 
 // Die load-Funktion wird beim Laden der Seite aufgerufen
 export async function load({ url }) {
   // Lade Spieler aus der API
   const apiPlayers = await getPlayersFromLeagues();
-  // Fuege jeden Spieler aus der API der Datenbank hinzu
+  // Füge jeden Spieler aus der API der Datenbank hinzu
   for (const player of apiPlayers) {
     await addPlayer(player);
   }
@@ -25,7 +25,7 @@ export async function load({ url }) {
     players = players.filter(p => p.position === selectedPosition);
   }
 
-  // Nach Alter filtern, falls gewaehlt
+  // Nach Alter filtern, falls gewählt
   if (selectedAge) {
     players = players.filter(p => p.age === parseInt(selectedAge));
   }
@@ -37,10 +37,10 @@ export async function load({ url }) {
     players.sort((a, b) => b.market_value - a.market_value);
   }
 
-  // Positionen sammeln (fuer Dropdown)
+  // Positionen sammeln (für Dropdown)
   const positions = [...new Set(players.map(p => p.position))];
 
-  // Rueckgabe der Daten an die Seite
+  // Rückgabe der Daten an die Seite
   return {
     players,
     positions,

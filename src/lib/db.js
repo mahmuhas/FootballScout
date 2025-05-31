@@ -119,7 +119,7 @@ export async function getAllPlayers() {
 // Hilfszugriff auf DB
 // ===========================
 
-// Gibt das DB-Objekt zurueck
+// Gibt das DB-Objekt zurück
 export function getDb() {
   return db;
 }
